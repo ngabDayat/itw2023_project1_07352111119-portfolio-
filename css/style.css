@@ -1,3 +1,4 @@
+/* melakukan reset */
 *{
     padding: 0;
     margin: 0;
@@ -8,23 +9,27 @@
     font-family: 'Quicksand', sans-serif;
 }
 
+/* Mendefinisikn variabel css global dgn root */
 :root{
-    --bg-color: #0b0c1f;
+    --bg-color: #04041b;
     --sc-bg-color: #12141c;
     --text-color: #fff;
-    --main-color: rgb(58, 90, 218);
+    --main-color: rgb(72, 105, 236);
     --sc-color: rgb(138, 138, 138);
     --o-color: #13161e;
-    --h1-font: 70px;
+    --h1-font: 100px;
     --h2-font: 56px;
     --p-font: 18px;
+    --br-radius: 10px;
 }
 
+/* Menerapkan background dan warna utama */
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
 }
 
+/* Mengatur tampilah header */
 header{
     position: fixed;
     right: 0;
@@ -43,6 +48,7 @@ header{
 .logo img{
     width: 100px;
     height: auto;
+    
 }
 
 .navbar{
@@ -55,7 +61,7 @@ header{
     font-weight: 600;
     padding: 10px 25px;
     margin: 0 2px;
-    border-radius: 8px;
+    border-radius: var(--br-radius);
     transition: all .40s ease;
 }
 
@@ -74,7 +80,9 @@ section{
     cursor: pointer;
     display: none;
 }
+/* bagian header selesai  */
 
+/* Mengatur tampilah home */
 .home{
     height: 100vh;
     width: 100%;
@@ -84,52 +92,38 @@ section{
     background-position: center;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content:flex-start;
+    padding-right: 2px;
 }
 
 .home-text h1{
-    /* font-family: 'League Spartan', sans-serif; */
-    margin: 2px 0px 15px;
+    font-family: 'Montserrat',sans-serif;
+    margin-bottom: 10px;
     font-size: var(--h1-font);
     font-weight: bold;
-    line-height: 1;
-    letter-spacing: 2px;
 }
-.home-text h4{
+.home-text h3, h4{
     color: var(--main-color);
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 30px;
+    font-weight: 800;
+    margin-left: 5px;
 }
 
-.home-text h3{
+/* .home-text h3{
     font-weight: 600;
-    font-size: 24px;
+    font-size: 30px;
     margin-bottom: 20px;
-}
-.btn{
-    display: inline-block;
-    padding: 14px 40px;
-    border-radius: 8px;
-    font-size: 17px;
-    font-weight: 600;
-    background: var(--main-color);
-    color: var(--text-color);
-    border:  2px solid var(--main-color);
-    transition: all .40s ease;
-}
-.btn:hover{
-    transform: scale(1.1) translateX(5px);
-    background: transparent;
-    border: 2px solid var(--main-color);
-}
+    margin-left: 5px;
+} */
 
+/* bagian header  */
 header.sticky{
     padding: 10px 16%;
     background: var(--bg-color);
     transition: 0.5s;
-    /* border-bottom: solid black; */
 }
 
+/* Mengatur bagian about */
 .about{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -153,7 +147,31 @@ header.sticky{
     margin-bottom: 32px;
 }
 
-.main-text {text-align: center;
+.about-img img{
+    width: 400px;
+    border-radius: var(--br-radius);
+}
+
+.btn{
+    display: inline-block;
+    padding: 14px 40px;
+    border-radius: var(--br-radius);
+    font-size: 17px;
+    font-weight: 600;
+    background: var(--main-color);
+    color: var(--text-color);
+    border:  2px solid var(--main-color);
+    transition: all .40s ease;
+}
+.btn:hover{
+    transform: scale(1.1) translateX(5px);
+    background: transparent;
+    border: 2px solid var(--main-color);
+}
+
+/* mengatur bagian skill */
+.main-text {
+    text-align: center;
 }
 .main-text h2{
     font-size: var(--h2-font);
@@ -176,11 +194,11 @@ header.sticky{
 
 .box{
     padding: 45px;
-    background: var(--sc-bg-color)
-;    border-top: 5px solid transparent;
+    background: var(--sc-bg-color);   
+    border-top: 5px solid transparent;
     transition: all .40s ease;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: var(--br-radius);
 
 }
 .box h3{
@@ -202,17 +220,18 @@ header.sticky{
 .box:hover h3 {color: var(--main-color); }
 
 .box img{
-    background: #b9b9b9;
-    width: 40px;
-    /* padding: 20px; */
-    border-radius: 8px;
+    background: var(--main-color);
+    width: 50px;
+    padding: 10px;
+    border-radius: var(--br-radius);
 }
 
-.portfolio-content{
+/* Mengatur tampilan project */
+.project-content{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, auto));
     align-items: center;
-    /* text-align: center; */
+    text-align: center;
     gap: 32px;
     margin-top: 80px;
 }
@@ -220,13 +239,13 @@ header.sticky{
 .row {
     padding: 25px;
     background: var(--sc-bg-color);
-    border-radius: 8px;
+    border-radius: var(--br-radius);
     transition: all .40s ease;
 }
 .row img{
     height: auto;
     width: 100%;
-    border-radius: 8px;
+    border-radius: var(--br-radius);
     margin-bottom: 24px;
 }
 
@@ -255,8 +274,7 @@ header.sticky{
     transform: scale(1.03) translateY(1px) translateX(1px);
 }
 
-/* Contacct */
-
+/* Mengatur tampilan Contacct */
 .contact{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -331,7 +349,7 @@ header.sticky{
     font-size: 16px;
     font-weight: 600;
     margin-bottom: 8px;
-    border-radius: 8px;
+    border-radius: var(--br-radius);
 }
 
 .contact-form textarea{
@@ -339,6 +357,7 @@ header.sticky{
     height: 200px;
 }
 
+/* Mengatur bagian submit */
 .contact-form form .send{
     border: none;
     outline: none;
@@ -351,9 +370,31 @@ header.sticky{
     height: 50px;
     transition: all .40s ease;
     cursor: pointer;
-    border-radius: 8px;
+    border-radius: var(--br-radius);
 }
 
+.contact-form form .success-message{
+    color: rgb(64, 172, 64);
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    position: absolute;
+    bottom: -30px;
+    left: 0%;
+    animation: fadeOut 2s ease;
+}
+
+@keyframes fadeOut{
+    form {
+        opacity: 10;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+
+/* Mengatur bagiaan footer*/
 .last-text{
     text-align: center;
     color: var(--sc-color);
@@ -374,9 +415,10 @@ header.sticky{
     background: var(--main-color);
     font-size: 20px;
     padding: 10px;
-    border-radius: 8px;
+    border-radius: var(--br-radius);
 }
 
+/* Mengatur tampilan responsif */
 @media (max-width: 1325px){
     header{padding: 16px 3%;}
     header.sticky{padding: 8px 3%;}
@@ -404,15 +446,13 @@ header.sticky{
     /* perbaiki dlu gambar di about me */
 }
 
-
-
-@media (max-widht: 830px) {
+@media (max-width: 830px){
     #menu-icon{
         display: block;
     }
     .navbar{
         position: absolute;
-        top: 100%;
+        top: -600px;
         right: 0;
         left: 0;
         display: flex;
@@ -427,13 +467,15 @@ header.sticky{
         margin: 16px;
     }
     .navbar.active{
-        top: 100%;
+        top: 100% ;
     }
     :root{
-        --h1-font: 59.2px;
-        --h2-font: 43.4px
+        --h1-font: 3.7rem;
+        --h2-font: 2.7rem;
+
     }
 }
+
 
 
 
