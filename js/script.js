@@ -1,8 +1,11 @@
+
+//membuat header sticky ketika di scroll
 const header = document.querySelector("header");
 window.addEventListener("scroll", function name() {
     header.classList.toggle ("sticky", window.scrollY > 0);
 });
 
+//membuat tampilah humberger
 let menu = document.querySelector("#menu-icon");
 let navbar = document.querySelector(".navbar");
 
@@ -29,6 +32,8 @@ const sr = ScrollReveal ({
 sr.reveal(".home-text", {delay:210, origin:"bottom"})
 sr.reveal(".about, .skill, .project, .contact", {delay:220, origin:"bottom"})
 
+
+//mengirim formulir dan memberikan pesan sukses
 $(document).ready(function () {
     $(".send").click(function (e) {
         e.preventDefault();
@@ -41,7 +46,7 @@ $(document).ready(function () {
             setTimeout(function() {
                 $("#submit-message").text("").removeClass("success-message");
             }, 3000);
-    }, 1000);
+    },);
     });
 });
 

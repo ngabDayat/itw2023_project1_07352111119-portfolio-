@@ -11,11 +11,11 @@
 
 /* Mendefinisikn variabel css global dgn root */
 :root{
-    --bg-color: #04041b;
-    --sc-bg-color: #12141c;
+    --bg-color: #0d1b2a;
+    --sc-bg-color: #20293a;
     --text-color: #fff;
-    --main-color: rgb(72, 105, 236);
-    --sc-color: rgb(138, 138, 138);
+    --main-color: #4a8eb3;
+    --sc-color: #e0e1dd;
     --o-color: #13161e;
     --h1-font: 100px;
     --h2-font: 56px;
@@ -40,7 +40,7 @@ header{
     align-items: center;
     justify-content: space-between;
     background: transparent;
-    padding: 22px 16%;
+    padding: 22px 15.6%;
     border-bottom: 1px solid transparent;
     transition: all .40s ease;
 }
@@ -109,16 +109,9 @@ section{
     margin-left: 5px;
 }
 
-/* .home-text h3{
-    font-weight: 600;
-    font-size: 30px;
-    margin-bottom: 20px;
-    margin-left: 5px;
-} */
-
 /* bagian header  */
 header.sticky{
-    padding: 10px 16%;
+    padding: 1px 15.4%;
     background: var(--bg-color);
     transition: 0.5s;
 }
@@ -312,7 +305,6 @@ header.sticky{
     transition: all .40s ease;
 }
 .contact-list li a:hover{
-    transform: scale(1.01);
     color: var(--main-color);
 }
 
@@ -331,7 +323,6 @@ header.sticky{
 }
 
 .contact-icon i:hover{
-    transform: scale(1.01) translateY(-5px);
     color: var(--text-color);
     background: var(--main-color);
 
